@@ -1,4 +1,10 @@
 I found a new way to combine .unique with the number of values in a variable while using .nunique
 by finding this reference in a google search:
-https://github.com/redeat17/Matplotlib-Challenge/blob/master/pymaceuticals_starter.ipynb This is a GitHub on Pymaceuticals posted by redeat17. I then looked up the difference between unique and nunique here: https://www.w3schools.com/python/pandas/ref_df_nunique.asp#:~:text=Definition%20and%20Usage,unique%20values%20for%20each%20row.
+https://github.com/redeat17/Matplotlib-Challenge/blob/master/pymaceuticals_starter.ipynb This is a GitHub on Pymaceuticals posted by redeat17. I then looked up the difference between unique and nunique here: https://www.w3schools.com/python/pandas/ref_df_nunique.asp#:~:text=Definition%20and%20Usage,unique%20values%20for%20each%20row. This meant I also had to add an import for numpy.
+
+Garret, gfrank on Slack, helped me add the .duplicated function to my code to find the duplicate mice by ID Number. I had most of the original code using .loc and .unique, but I kept getting an error and wasn't finding the repeats. 
+duplicate_mice = pymaceutical_main.loc[pymaceutical_main.duplicated(subset=['Mouse ID', 'Timepoint']),'Mouse ID'].unique()
+
+I did a lot of googling to find the right format for the one line aggregation method to create the summary statistics dataframe. I used this website for the basic format: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.aggregate.html Then I went back in our homework activities to review how to add functions onto the end of a groupby statement. It took me a lot of trials with brackets and parantheses to get the code to run.  
+
 
