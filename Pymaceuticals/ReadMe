@@ -1,0 +1,4 @@
+I found a new way to combine .unique with the number of values in a variable while using .nunique
+by finding this reference in a google search:
+https://github.com/redeat17/Matplotlib-Challenge/blob/master/pymaceuticals_starter.ipynb This is a GitHub on Pymaceuticals posted by redeat17. I then looked up the difference between unique and nunique here: https://www.w3schools.com/python/pandas/ref_df_nunique.asp#:~:text=Definition%20and%20Usage,unique%20values%20for%20each%20row.
+
