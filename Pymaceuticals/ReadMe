@@ -8,3 +8,4 @@ duplicate_mice = pymaceutical_main.loc[pymaceutical_main.duplicated(subset=['Mou
 I did a lot of googling to find the right format for the one line aggregation method to create the summary statistics dataframe. I used this website for the basic format: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.aggregate.html Then I went back in our homework activities to review how to add functions onto the end of a groupby statement. It took me a lot of trials with brackets and parantheses to get the code to run.  
 
 
+I contacted the Learning Assistant, Bigyan, bkhanal on Slack, to help me discover I needed to add .index to my .values line when trying to get the right data to plot in my pyplot bar graph. She helped me create "drug_regimen_counts.index.values" to find my x-axis values.
