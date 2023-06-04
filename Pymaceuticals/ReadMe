@@ -1,11 +1,17 @@
-I found a new way to combine .unique with the number of values in a variable while using .nunique
-by finding this reference in a google search:
+Source citing for Pymaceuticals
+
+I found a new way to combine .unique with the number of values in a variable while using .nunique by finding this reference in a google search:
 https://github.com/redeat17/Matplotlib-Challenge/blob/master/pymaceuticals_starter.ipynb This is a GitHub on Pymaceuticals posted by redeat17. I then looked up the difference between unique and nunique here: https://www.w3schools.com/python/pandas/ref_df_nunique.asp#:~:text=Definition%20and%20Usage,unique%20values%20for%20each%20row. This meant I also had to add an import for numpy.
 
-Garret, gfrank on Slack, helped me add the .duplicated function to my code to find the duplicate mice by ID Number. I had most of the original code using .loc and .unique, but I kept getting an error and wasn't finding the repeats. 
+Garret, gfrank on Slack, the Learning Assistant, helped me add the .duplicated function to my code to find the duplicate mice by ID Number. I had most of the original code using .loc and .unique, but I kept getting an error and wasn't finding the repeats. 
 duplicate_mice = pymaceutical_main.loc[pymaceutical_main.duplicated(subset=['Mouse ID', 'Timepoint']),'Mouse ID'].unique()
 
-I did a lot of googling to find the right format for the one line aggregation method to create the summary statistics dataframe. I used this website for the basic format: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.aggregate.html Then I went back in our homework activities to review how to add functions onto the end of a groupby statement. It took me a lot of trials with brackets and parantheses to get the code to run.  
+Bigyan, bkhanal on Slack, the Learning Assistant, helped me discover I needed to add the function .index to my .values line when trying to get the right data to plot in my pyplot bar graph. She helped me create "drug_regimen_counts.index.values" to find my x-axis values.
+
+Jesse Wright, the tutor for my session, helped me process through my quartiles, outliers and box plot. Specifically, he helped me re-direct my for loop to get the correct data in my max tumor volume list. He basically helped me develop this: tumor_volume = mice_by_tumor.loc[mice_by_tumor["Drug Regimen"] == drug, "Tumor Volume (mm3)"]
+
+I used this Stacked Overflow thread to format my outlier in the box plot by Drug Regimen, https://stackoverflow.com/a/65648952/21682939. I used this code: 
+flierprops={'marker': 'o', 'markersize': 10, 'markerfacecolor': 'fuchsia'} written by JohanC and adjusted the color to red. 
 
 
-I contacted the Learning Assistant, Bigyan, bkhanal on Slack, to help me discover I needed to add .index to my .values line when trying to get the right data to plot in my pyplot bar graph. She helped me create "drug_regimen_counts.index.values" to find my x-axis values.
+
